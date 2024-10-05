@@ -11,7 +11,6 @@ class SplashScreen extends StatefulWidget {
 }
 
 class _SplashScreenState extends State<SplashScreen> {
-
   @override
   void initState() {
     // TODO: implement initState
@@ -19,14 +18,15 @@ class _SplashScreenState extends State<SplashScreen> {
     navigateToHomeScreen();
   }
 
-
   navigateToHomeScreen() {
-    Timer(Duration(seconds: 4), () {
-      Navigator.push(
-          context,
-          MaterialPageRoute(
-            builder: (context) => const MyHomePage(title: 'fluttor Demo'),
-          ));
+    Timer(const Duration(seconds: 4), () {
+      Navigator.pushAndRemoveUntil(
+        context,
+        MaterialPageRoute(
+          builder: (context) => const MyHomePage(title: 'My home page'),
+        ),
+        (route) => false,
+      );
     });
   }
 
