@@ -14,34 +14,39 @@ class ProductCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Card(
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
-      elevation: 3,
-      child: Container(
-        //color: Colors.blue,
-        child: Padding(
-          padding: const EdgeInsets.only(top: 30),
-          child: Column(
-            children: [
-              Container(
-                color: Colors.grey,
-                height: 170,
-                width: 150,
-
-              ),
-              Padding(
-                padding: const EdgeInsets.only(top: 0),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    Text(productName,
-                        style: const TextStyle(fontWeight: FontWeight.bold)),
-                    const SizedBox(height: 5),
-                    Text(price, style: const TextStyle(color: Colors.green)),
-                  ],
+    return InkWell(
+      onTap: () {
+        print("card");
+      },
+      child: Card(
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+        elevation: 3,
+        child: Container(
+          //color: Colors.blue,
+          child: Padding(
+            padding: const EdgeInsets.only(top: 30),
+            child: Column(
+              children: [
+                Container(
+                  color: Colors.grey,
+                  height: 170,
+                  width: 150,
+      
                 ),
-              ),
-            ],
+                Padding(
+                  padding: const EdgeInsets.only(top: 0),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      Text(productName,
+                          style: const TextStyle(fontWeight: FontWeight.bold)),
+                      const SizedBox(height: 5),
+                      Text(price, style: const TextStyle(color: Colors.green)),
+                    ],
+                  ),
+                ),
+              ],
+            ),
           ),
         ),
       ),

@@ -168,11 +168,13 @@ class home extends StatelessWidget {
         ],
       ),
       bottomNavigationBar: BottomNavigationBar(
+
         backgroundColor: Colors.blue,
         items: const [
-          BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home",),
-          BottomNavigationBarItem(icon: Icon(Icons.shop), label: "Shop"),
-          BottomNavigationBarItem(icon: Icon(Icons.search), label: "search"),
+
+          BottomNavigationBarItem(icon: Icon(Icons.home,color: Colors.black,), label: "Home",),
+          BottomNavigationBarItem(icon: Icon(Icons.alarm,color: Colors.black,), label: "Shop"),
+          BottomNavigationBarItem(icon: Icon(Icons.shop,color: Colors.black,), label: "search"),
         ],
       ),
 

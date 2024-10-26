@@ -11,15 +11,20 @@ class CategoryTile extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 10.0),
-      child: Column(
-        children: [
-          CircleAvatar(
-            radius: 30,
-            child: Icon(icon, size: 30),
-          ),
-          const SizedBox(height: 8),
-          Text(label, style: const TextStyle(fontSize: 14)),
-        ],
+      child: InkWell(
+        onTap: () {
+          print("object");
+        },
+        child: Column(
+          children: [
+            CircleAvatar(
+              radius: 30,
+              child: Icon(icon, size: 30),
+            ),
+            const SizedBox(height: 8),
+            Text(label, style: const TextStyle(fontSize: 14)),
+          ],
+        ),
       ),
     );
   }
