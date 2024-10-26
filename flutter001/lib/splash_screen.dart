@@ -19,7 +19,7 @@ class _SplashScreenState extends State<SplashScreen> {
   }
 
   navigateToHomeScreen() {
-    Timer(const Duration(seconds: 4), () {
+    Timer(const Duration(seconds: 2), () {
       Navigator.pushAndRemoveUntil(
         context,
         MaterialPageRoute(

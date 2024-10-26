@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'constants/cards.dart';
+
 class home extends StatelessWidget {
   const home({super.key});
 
@@ -164,6 +166,14 @@ class home extends StatelessWidget {
           ),
         ],
       ),
+      bottomNavigationBar: BottomNavigationBar(
+        backgroundColor: Colors.blue,
+        items: const [
+          BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home"),
+          BottomNavigationBarItem(icon: Icon(Icons.shop), label: "Shop"),
+          BottomNavigationBarItem(icon: Icon(Icons.search), label: "search"),
+        ],
+      ),
     );
   }
 }
@@ -175,8 +185,8 @@ class Box extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       color: Colors.blue,
-      height: 200,
-      width: 200,
+      height: 150,
+      width: 150,
       padding: const EdgeInsets.all(10),
       child: Container(
         color: Colors.grey,
@@ -212,39 +222,4 @@ class CategoryTile extends StatelessWidget {
   }
 }
 
-class ProductCard extends StatelessWidget {
-  final String imageUrl;
-  final String productName;
-  final String price;
 
-  const ProductCard(
-      {super.key,
-      required this.imageUrl,
-      required this.productName,
-      required this.price});
-
-  @override
-  Widget build(BuildContext context) {
-    return Card(
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
-      elevation: 3,
-      child: Column(
-        children: [
-          Image.network(imageUrl, height: 120, fit: BoxFit.cover),
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(productName,
-                    style: const TextStyle(fontWeight: FontWeight.bold)),
-                const SizedBox(height: 4),
-                Text(price, style: const TextStyle(color: Colors.green)),
-              ],
-            ),
-          ),
-        ],
-      ),
-    );
-  }
-}

@@ -23,8 +23,8 @@ class MyApp extends StatelessWidget {
       ),
       //home: forgotpsw(),
       //home: const MyHomePage(title: 'flutter demo'),
-      //home: home(),
-      home: SplashScreen(),
+      home: home(),
+      // home: SplashScreen(),
     );
   }
 }
