@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'constants/Categorys.dart';
 import 'constants/cards.dart';
 
 class home extends StatelessWidget {
@@ -169,57 +170,17 @@ class home extends StatelessWidget {
       bottomNavigationBar: BottomNavigationBar(
         backgroundColor: Colors.blue,
         items: const [
-          BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home"),
+          BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home",),
           BottomNavigationBarItem(icon: Icon(Icons.shop), label: "Shop"),
           BottomNavigationBarItem(icon: Icon(Icons.search), label: "search"),
         ],
       ),
+
     );
   }
 }
 
-class Box extends StatelessWidget {
-  const Box({super.key});
 
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      color: Colors.blue,
-      height: 150,
-      width: 150,
-      padding: const EdgeInsets.all(10),
-      child: Container(
-        color: Colors.grey,
-        // decoration: BoxDecoration(
-        //   borderRadius: BorderRadius.circular(2)
-        // ),
-      ),
-    );
-  }
-}
 
-class CategoryTile extends StatelessWidget {
-  final IconData icon;
-  final String label;
-
-  const CategoryTile({super.key, required this.icon, required this.label});
-
-  @override
-  Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 10.0),
-      child: Column(
-        children: [
-          CircleAvatar(
-            radius: 30,
-            child: Icon(icon, size: 30),
-          ),
-          const SizedBox(height: 8),
-          Text(label, style: const TextStyle(fontSize: 14)),
-        ],
-      ),
-    );
-  }
-}
 
 
